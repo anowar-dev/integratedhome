@@ -34,7 +34,6 @@ const HeroSection = () => {
             {/* Hero Section Content Positioned at the Bottom */}
             <motion.div
                 className="relative z-10 flex flex-col justify-end items-center h-full text-center px-4 pb-20 md:pb-52"
-                className="relative z-10 flex flex-col justify-end items-center h-full text-center px-4 pb-20 md:pb-52"
                 variants={heroVariant}
                 initial="hidden"
                 animate="visible"
