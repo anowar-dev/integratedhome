@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", serif;
+
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 700;
+}
+
+.swiper-slide {
+  filter: grayscale(50%) brightness(40%);
+  will-change: transform;
+  /* margin: 100px 0; */
+}
+.swiper-slide .card {
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+.swiper-slide .card-container {
+  background-color: white;
+  height: 450px;
+  margin: 0 20px;
+}
+.swiper-slide-active {
+  filter: grayscale(0%) brightness(100%);
+  padding: 0px;
+  height: 100%;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+.swiper-slide-active .card-container {
+  background-color: white;
+  height: 500px;
+}
+.swiper-button-prev, .swiper-button-next{
+  color: white !important;
+}
