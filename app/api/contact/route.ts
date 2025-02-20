@@ -1,4 +1,3 @@
-// app/api/contact/route.ts
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
@@ -6,21 +5,25 @@ export async function POST(request: Request) {
   try {
     const { name, email, phone, company, message } = await request.json();
 
-    // Configure your nodemailer transporter
+    // CORS হ্যান্ডেল করুন
+    if (request.method === "OPTIONS") {
+      return NextResponse.json({}, { status: 200 });
+    }
+
+    // Nodemailer configuration
     const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST, // e.g., smtp.gmail.com
-      port: Number(process.env.EMAIL_PORT), // e.g., 465 for secure SMTP
-      secure: true, // true if using port 465, false for other ports
+      host: process.env.EMAIL_HOST,
+      port: Number(process.env.EMAIL_PORT),
+      secure: true,
       auth: {
-        user: process.env.EMAIL_USER, // Your email address
-        pass: process.env.EMAIL_PASSWORD, // Your email password or app password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWORD,
       },
     });
 
-    // Send the email
     await transporter.sendMail({
       from: `"Contact Form" <${process.env.EMAIL_USER}>`,
-      to: process.env.RECEIVER_EMAIL, // The email address that should receive the form details
+      to: process.env.RECEIVER_EMAIL,
       subject: "New Contact Form Submission",
       html: `
         <h3>New Message from Contact Form</h3>
@@ -32,15 +35,9 @@ export async function POST(request: Request) {
       `,
     });
 
-    return NextResponse.json(
-      { message: "Email sent successfully" },
-      { status: 200 }
-    );
+    return NextResponse.json({ message: "Email sent successfully" }, { status: 200 });
   } catch (error) {
     console.error("Error sending email:", error);
-    return NextResponse.json(
-      { message: `Error sending email ${error}` },
-      { status: 500 }
-    );
+    return NextResponse.json({ message: `Error sending email: ${error}` }, { status: 500 });
   }
 }
