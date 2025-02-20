@@ -150,7 +150,7 @@ export default function FullScreenPinnedPanels() {
         <>
             <div ref={containerRef} className="bg-secondary">
                 
-                <div data-panel style={descriptionPanelStyle}>
+                <div style={descriptionPanelStyle}>
                 <h2 className="text-primary text-4xl font-bold mb-2 w-fit pt-16 mx-auto">
                             360-Degree Solution
                         </h2>

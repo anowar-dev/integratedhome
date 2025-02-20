@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Branding */}
                     <div>
-                        <h1 className="text-3xl font-bold text-primary mb-4">integratedhome.</h1>
+                        <Link href="/"><h1 className="text-3xl font-bold text-primary mb-4">integratedhome.</h1></Link>
                         {/* Optionally, include a tagline here */}
                     </div>
                     {/* Quick Links */}
@@ -42,17 +42,17 @@ const Footer = () => {
                         <h2 className="text-xl font-bold mb-4">Categories</h2>
                         <ul className="space-y-2 text-sm">
                             <li>
-                                <Link href="/energy-management">
+                                <Link href="#">
                                     Energy Management
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/security-access-control">
+                                <Link href="#">
                                     Security &amp; Access Control
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/smart-lighting-control">
+                                <Link href="#">
                                     Smart Lighting Control
                                 </Link>
                             </li>
@@ -79,17 +79,17 @@ const Footer = () => {
                         <h2 className="text-xl font-bold mt-6 mb-4">Follow Us</h2>
                         <ul className="flex space-x-4 justify-center md:justify-start">
                             <li>
-                                <Link href="#" className="hover:underline">
+                                <Link target="_blank" href="#" className="hover:underline">
                                     Facebook
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="hover:underline">
+                                <Link target="_blank" href="#" className="hover:underline">
                                     Instagram
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="hover:underline">
+                                <Link target="_blank" href="#" className="hover:underline">
                                     LinkedIn
                                 </Link>
                             </li>

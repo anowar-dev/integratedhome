@@ -113,7 +113,7 @@ const GetInTouchSection: React.FC = () => {
                         <div>
                             <label htmlFor="name" className="block text-light mb-2">
                                 {/* // eslint-disable-next-line react/no-unescaped-entities */}
-                                Whats your name?
+                                Whats your name? <span className="text-red-600 font-extrabold text-2xl">*</span>
                             </label>
                             <input
                                 type="text"
@@ -128,7 +128,7 @@ const GetInTouchSection: React.FC = () => {
                         </div>
                         <div>
                             <label htmlFor="email" className="block text-light mb-2">
-                                Your email?
+                                Your email? <span className="text-red-600 font-extrabold text-2xl">*</span>
                             </label>
                             <input
                                 type="email"
@@ -171,7 +171,7 @@ const GetInTouchSection: React.FC = () => {
                         </div>
                         <div>
                             <label htmlFor="message" className="block text-light mb-2">
-                                Let us know how to make your building work?
+                                Let us know how to make your building work? <span className="text-red-600 font-extrabold text-2xl">*</span>
                             </label>
                             <textarea
                                 id="message"

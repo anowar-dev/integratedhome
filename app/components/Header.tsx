@@ -29,16 +29,16 @@ const Header = () => {
                     {/* <Link href="wwww.facebook.com" className="text-light hover:text-secondary transition">
                         <FaMobileAlt />
                     </Link> */}
-                    <Link href="https://www.facebook.com" className="text-light hover:text-secondary transition">
+                    <Link target="_blank" href="https://www.facebook.com" className="text-light hover:text-secondary transition">
                         <FaFacebookF />
                     </Link>
-                    <Link href="https://www.instagram.com" className="text-light hover:text-secondary transition">
+                    <Link target="_blank" href="https://www.instagram.com" className="text-light hover:text-secondary transition">
                         <FaInstagram />
                     </Link>
-                    <Link href="https://www.linkedin.com" className="text-light hover:text-secondary transition">
+                    <Link target="_blank" href="https://www.linkedin.com" className="text-light hover:text-secondary transition">
                         <FaLinkedinIn />
                     </Link>
-                    <Link href="https://www.shopify.com" className="text-light hover:text-secondary transition">
+                    <Link target="_blank" href="https://www.shopify.com" className="text-light hover:text-secondary transition">
                         <FaShopify />
                     </Link>
                 </div>

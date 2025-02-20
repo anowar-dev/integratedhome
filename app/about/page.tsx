@@ -15,10 +15,10 @@ const slideInRight = {
 };
 
 // Define an extra variant for fading in and sliding up.
-const fadeInUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-};
+// const fadeInUp = {
+//     hidden: { opacity: 0, y: 20 },
+//     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+// };
 
 // Reusable component that animates its children when they enter/leave the viewport.
 const AnimatedItem = ({
@@ -62,18 +62,8 @@ export default function page() {
         <div className="space-y-12 bg-secondary py-40 overflow-hidden">
             {/* Section 1: Image left, text right */}
             <section className="container mx-auto flex flex-col md:flex-row items-center overflow-hidden">
-                {/* Image Column */}
-                <AnimatedItem variant={slideInLeft} className="w-full md:w-1/2">
-                    <Image
-                        src="https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                        alt="Technology Background"
-                        layout="responsive"
-                        width={600}
-                        height={400}
-                        className="object-cover rounded-2xl border-4 border-primary"
-                    />
-                </AnimatedItem>
-                {/* Text Column */}
+
+                
                 <AnimatedItem variant={slideInRight} className="w-full md:w-1/2 p-8">
                     <h2 className="text-primary text-4xl font-bold mb-2">
                         About Us
@@ -86,11 +76,24 @@ export default function page() {
                         and sustainable resource-saving construction is in great demand.
                     </p>
                 </AnimatedItem>
+                
+                
+                <AnimatedItem variant={slideInLeft} className="w-full md:w-1/2">
+                    <Image
+                        src="https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="Technology Background"
+                        layout="responsive"
+                        width={600}
+                        height={400}
+                        className="object-cover rounded-2xl border-4 border-primary"
+                    />
+                </AnimatedItem>
+                
             </section>
 
             {/* Section 2: Text left, image right */}
-            <section className="container mx-auto flex flex-col md:flex-row-reverse items-center overflow-hidden">
-                {/* Image Column */}
+            {/* <section className="container mx-auto flex flex-col md:flex-row-reverse items-center overflow-hidden">
+             
                 <AnimatedItem variant={slideInRight} className="w-full md:w-1/2">
                     <Image
                         src="https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -101,7 +104,7 @@ export default function page() {
                         className="object-cover rounded-2xl border-4 border-primary"
                     />
                 </AnimatedItem>
-                {/* Text Column */}
+                
                 <AnimatedItem variant={slideInLeft} className="w-full md:w-1/2 p-8">
                     <h2 className="text-primary text-4xl font-bold mb-4">
                         How Does Building Automation Work?
@@ -113,11 +116,11 @@ export default function page() {
                         communication of all components in the field and in the control cabinet.
                     </p>
                 </AnimatedItem>
-            </section>
+            </section> */}
 
             {/* Section 3: Image left, text right */}
-            <section className="container mx-auto flex flex-col md:flex-row items-center overflow-hidden">
-                {/* Image Column */}
+            {/* <section className="container mx-auto flex flex-col md:flex-row items-center overflow-hidden">
+                
                 <AnimatedItem variant={slideInLeft} className="w-full md:w-1/2">
                     <Image
                         src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -128,7 +131,7 @@ export default function page() {
                         className="object-cover rounded-2xl border-4 border-primary"
                     />
                 </AnimatedItem>
-                {/* Text Column */}
+                
                 <AnimatedItem variant={slideInRight} className="w-full md:w-1/2 p-8">
                     <p className="text-light text-base mb-2">WELCOME TO</p>
                     <h1 className="text-primary text-4xl font-bold mb-4">
@@ -148,11 +151,11 @@ export default function page() {
                         communication of all components in the field and in the control cabinet.
                     </p>
                 </AnimatedItem>
-            </section>
+            </section> */}
 
             {/* Section 4: Text left, image right */}
-            <section className="container mx-auto flex flex-col md:flex-row-reverse items-center overflow-hidden">
-                {/* Image Column */}
+            {/* <section className="container mx-auto flex flex-col md:flex-row-reverse items-center overflow-hidden">
+                
                 <AnimatedItem variant={slideInRight} className="w-full md:w-1/2">
                     <Image
                         src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -163,7 +166,7 @@ export default function page() {
                         className="object-cover rounded-2xl border-4 border-primary"
                     />
                 </AnimatedItem>
-                {/* Text Column */}
+                
                 <AnimatedItem variant={slideInLeft} className="w-full md:w-1/2 p-8">
                     <h2 className="text-primary text-4xl font-bold mb-4">
                         The Three Levels of Building Automation
@@ -175,17 +178,17 @@ export default function page() {
                         higher-level operation and monitoring.
                     </p>
                 </AnimatedItem>
-            </section>
+            </section> */}
 
             {/* Extra Section: Title and Two Images Side by Side */}
-            <section className="container mx-auto flex flex-col items-center overflow-hidden py-12">
+            {/* <section className="container mx-auto flex flex-col items-center overflow-hidden py-12">
                 <AnimatedItem variant={fadeInUp} className="w-full">
                     <h2 className="text-primary text-4xl font-bold mb-8">
                         Intelligent and scalable
                     </h2>
                 </AnimatedItem>
                 <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full">
-                    {/* First Image */}
+                    
                     <AnimatedItem variant={slideInLeft} className="w-full md:w-1/2">
                         <Image
                             src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -196,7 +199,7 @@ export default function page() {
                             className="object-cover rounded-xl border-4 border-primary"
                         />
                     </AnimatedItem>
-                    {/* Second Image */}
+                    
                     <AnimatedItem variant={slideInRight} className="w-full md:w-1/2">
                         <Image
                             src="https://images.pexels.com/photos/1001688/pexels-photo-1001688.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -208,7 +211,7 @@ export default function page() {
                         />
                     </AnimatedItem>
                 </div>
-            </section>
+            </section> */}
         </div>
     );
 }
